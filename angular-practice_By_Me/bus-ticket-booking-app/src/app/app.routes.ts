@@ -6,6 +6,6 @@ export const routes: Routes = [
 
     {path:'', redirectTo:'search', pathMatch:'full'},
     {path:'search', component:SearchComponent, pathMatch:'full'},
-    {path:'booking', component:BookingComponent, pathMatch:'full'},
+    {path:'booking/:id', component:BookingComponent, pathMatch:'full'},
 
 ];

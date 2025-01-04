@@ -28,6 +28,15 @@ export class MasterService {
 
   }
 
+  getScheduleId(id:number){
+    return this.http.get<any[]>(this.apiUrl + 'GetBusScheduleById?id='+id)
+
+  }
+
+  getBookedSeats(id:number){
+    return this.http.get<any[]>(this.apiUrl + 'getBookedSeats?shceduleId='+id)
+  }
+
 
 
 }
