@@ -1,0 +1,47 @@
+  <div>
+    <h2>New Project</h2>
+  </div>
+   <form class="mb-4" [formGroup]="projectForm">
+    <div class="row">
+        <div class="col-md-6">
+            <label for="projectName" class="form-label">Project Name</label>
+            <input type="text" class="form-control" id="projectName" 
+            placeholder="Enter project name" formControlName="projectName">
+        </div>
+        <div class="col-md-6">
+            <label for="clientName" class="form-label">Client Name</label>
+            <input type="text" class="form-control" id="clientName" 
+            placeholder="Enter client name" formControlName="clientName">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input type="date" class="form-control" id="startDate" formControlName="startDate">
+        </div>
+        <div class="col-md-6">
+            <label for="leadByEmpId" class="form-label">Lead By Employee ID</label>
+            <select formControlName="leadByEmpId">
+                @for(item of employeeList$ | async; track $index){
+                  
+                    <option [value]="item.employeeId">{{item.employeeName}}</option>
+
+                }
+            </select>
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="contactPerson" class="form-label">Contact Person</label>
+            <input type="text" class="form-control" id="contactPerson" 
+            placeholder="Enter contact person name" formControlName="contactPerson">
+        </div>
+        <div class="col-md-6">
+            <label for="contactNoProject" class="form-label">Contact No</label>
+            <input type="text" class="form-control" id="contactNoProject" 
+            placeholder="Enter contact number"  formControlName="contactNo">
+        </div>
+    </div>
+    <button type="button" class="btn btn-primary mt-3" (click)="onSaveProject()">Submit</button>
+</form>

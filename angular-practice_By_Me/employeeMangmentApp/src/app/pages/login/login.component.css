@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.parent {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-wrapper {
+  width: 700px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.25), -5px -5px 15px rgb(0, 0, 0, 0.25);
+}
+
+.background {
+  width: 1100px;
+  height: 600px;
+  bottom: 0;
+  left: -200px;
+  background: black;
+  position: absolute;
+  transform-origin: bottom center;
+  transform: translate(100px, -180px) rotate(50deg);
+  z-index: 10;
+  transition: transform 0.5s ease;
+}
+
+.login-container,
+.signup-container {
+  position: absolute;
+  top: 0;
+  width: 350px;
+  height: 400px;
+  z-index: 5;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.login-container {
+  left: 0;
+}
+
+.signup-container {
+  right: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+.inner-div {
+  width: 75%;
+}
+
+.form-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-item input {
+  width: 100%;
+  padding: 8px 5px;
+  border: none;
+  border-bottom: 2px solid black;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+.form-item label {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-button {
+  width: 100%;
+  padding: 8px 0;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.headline {
+  display: inline-block;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.headline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 50%;
+  height: 3px;
+  background-color: black;
+}
