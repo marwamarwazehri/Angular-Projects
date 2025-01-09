@@ -60,6 +60,24 @@ getAllProjects():Observable<IProject[]>{
   
 }
 
+getProjectById(id:number):Observable<IProject>{
+  return this.http.get<IProject>('https://projectapi.gerasim.in/api/EmployeeManagement/GetProject/'+id);
+  
+}
+
+updateProject(obj:IProject):Observable<IProject>{
+  return this.http.put<IProject>('https://projectapi.gerasim.in/api/EmployeeManagement/UpdateProject/'+obj.projectId,obj);
+  
+}
+
+// getProjectEmp():Observable<IProject[]>{
+//   return this.http.get<IProject[]>('https://projectapi.gerasim.in/api/EmployeeManagement/GetAllProjectEmployees');
+  
+// }
+
+
+
+
 
 
 }

@@ -34,3 +34,6 @@ export interface IProject{
     contactNo:string,
     emailId:string,
 }
+
+
+

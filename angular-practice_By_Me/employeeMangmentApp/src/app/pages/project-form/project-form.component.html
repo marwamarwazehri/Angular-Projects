@@ -43,5 +43,11 @@
             placeholder="Enter contact number"  formControlName="contactNo">
         </div>
     </div>
-    <button type="button" class="btn btn-primary mt-3" (click)="onSaveProject()">Submit</button>
+    @if(projectForm.controls['projectId'].value==0){
+        <button type="button" class="btn btn-primary mt-3" (click)="onSaveProject()">save Project</button>
+    }@else{
+        <button type="button" class="btn btn-primary mt-3" (click)="updateProject()">update project</button>
+    }
+   
+    
 </form>
